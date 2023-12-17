@@ -1,0 +1,55 @@
+[gd_scene load_steps=2 format=3 uid="uid://8wk6k7m1uj1l"]
+
+[ext_resource type="Script" path="res://pages/Page_3.gd" id="1_mqfsr"]
+
+[node name="Page 3" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mqfsr")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.0
+offset_top = 50.0
+offset_right = 236.0
+offset_bottom = 601.0
+grow_horizontal = 2
+bbcode_enabled = true
+text = "[center][font_size=30]Just example, how to play with change_scene_to_file().[/font_size][/center]"
+
+[node name="Previous" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -8.0
+offset_right = 8.0
+grow_vertical = 0
+text = "Previous Page
+
+"
+
+[node name="Next" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Next Page
+
+"
+
+[connection signal="pressed" from="Previous" to="." method="_on_previous_pressed"]

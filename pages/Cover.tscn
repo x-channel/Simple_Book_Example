@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbeb6t3m0x83g"]
+
+[ext_resource type="Texture2D" uid="uid://cb2s3wiauod42" path="res://icon.svg" id="1_hmv4p"]
+[ext_resource type="Script" path="res://pages/Cover.gd" id="1_iacvv"]
+
+[node name="Cover" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iacvv")
+
+[node name="Title" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "
+
+
+[font_size=60][center][b]About:Blank History[/b][/center][/font_size]
+
+
+
+
+
+"
+
+[node name="Autor" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -43.0
+offset_bottom = 3.0
+bbcode_enabled = true
+text = "[right]Neither write or ilustrated by Cairé.		[/right]"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -139.0
+offset_top = -139.0
+offset_right = 141.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hmv4p")
+
+[node name="Open" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -63.0
+offset_top = -31.0
+offset_right = 63.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Open this book
+
+"
+
+[connection signal="pressed" from="Open" to="." method="_on_open_pressed"]
